@@ -1,0 +1,32 @@
+.home-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-left: 20%;
+}
+
+#hi-title {
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.je-suis {
+    z-index: 1;
+    font-size: 65px;
+    margin-top: 10px;
+}
+
+.orange-letter {
+    color: #FFA500;
+}
