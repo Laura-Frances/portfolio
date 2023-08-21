@@ -1,7 +1,8 @@
 .App {
   font-family: 'Consolas';
-  position: relative;
   display: flex;
   flex-direction: column;
+  color: #fff;
+  width: 100%;
 }
 

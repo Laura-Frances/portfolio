@@ -1,0 +1,120 @@
+.section-contact-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.contact-block {
+    z-index: 1;
+    background-color: #1a1a1a;
+    width: 70%;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.contact-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.08;
+    margin: 0;
+}
+.title::after {
+    content: "";
+    width: 100px; 
+    height: 3px; 
+    background-color: #fff; 
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+.contact-text {
+    color: #fff;
+    opacity: 0.8;
+    margin: 50px 0px 50px 0px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-form-name,
+.contact-form-email {
+    font-family: 'Consolas' !important;
+    width: 500px;
+    resize: none;
+    border: none;
+    color: inherit;
+    margin-bottom: 6px;
+    background-color: #282828;
+    font-size: 1.6rem;
+}
+
+.contact-form-message {
+    width: 500px;
+    height: 140px;
+    resize: none;
+    border: none;
+    color: inherit;
+    margin-bottom: 6px;
+    background-color: #282828;
+    font-size: 1.6rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    font-size: 17px;
+}
+
+.success-message {
+    color: #e9ac51;
+    margin-top: 10px;
+}
+
+#submit-form {
+    font-family: 'Consolas' !important;
+    color: #fff;
+    border: none;
+    border-bottom: 5px solid #ff4d5a;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    position: relative;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    margin: 40px 0px 35px 0px;
+    transition: background-color 0.5s ease;
+}
+
+#submit-form:hover {
+    background-color: #ff4d5a;
+}

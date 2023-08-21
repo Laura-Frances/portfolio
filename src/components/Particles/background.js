@@ -6,17 +6,16 @@ import '../Particles/background.css'
 
 const Background = () => {
         const particlesInit = useCallback(async (engine) => {
-            console.log(engine);
             await loadFull(engine);
         }, []);
     
         const particlesLoaded = useCallback(async (container) => {
-            await console.log(container);
         }, []);
 
-        const particleColors = ["#6A9955", "#B5CEA8", "#9CDCFE", "#CE9178", "#C586C0"];
+        const particleColors = ["#FFF", "#ff4d5a", "#FFF"];
     
         return (
+
                 <Particles
                     id="tsparticles-home"
                     init={particlesInit}
@@ -33,15 +32,18 @@ const Background = () => {
                                 },
                                 onHover: {
                                     enable: true,
-                                    mode: "bubble",
+                                    mode: "repulse",
                                 },
                             },
                             modes: {
                                 push: {
-                                    quantity: 5,
+                                    distance: 400,
+                                    line_linked: {
+                                        opacity: 0.7
+                                    }
                                 },
                                 repulse: {
-                                    distance: 100,
+                                    distance: 120,
                                     duration: 0.4,
                                 },
                             },
@@ -50,7 +52,7 @@ const Background = () => {
                             number: {
                                 density: {
                                     enable: true,
-                                    area: 900,
+                                    area: 1000,
                                 },
                                 value: 100,
                             },
@@ -71,7 +73,7 @@ const Background = () => {
                             },
                             move: {
                                 enable: true,
-                                speed: 0.5,
+                                speed: 0.8,
                                 direction: "none",
                                 random: false,
                                 straight: false,
@@ -80,14 +82,14 @@ const Background = () => {
                                 enable: true,
                                 color: "#ffffff",
                                 distance: 150,
-                                opacity: 0.3,
-                                width: 0.1,
+                                opacity: 0.7,
+                                width: 0.08,
                             },
                         },
                         detectRetina: true,
                     }}
                 />
-           
+
         )
     }
     
