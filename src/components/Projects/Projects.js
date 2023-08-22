@@ -1,27 +1,40 @@
 import React, { useState } from 'react';
 import '../Projects/Projects.css';
 import { Element } from 'react-scroll';
+import Modale from '../Modale/Modale';
+import ImageBooki from '../Projects/Booki-img.png';
+import SophieBluel from '../Projects/SophieBluel-img.png';
+import Kasa from '../Projects/Kasa-img.png';
+import KasaURL from '../Projects/KASA-banner.png';
+import BookiURL from '../Projects/BOOKI-banner.png';
+import SophieURL from '../Projects/SOPHIE-banner.png';
 
 const Projects = () => {
     // création du tableau représentant mes projets
     const projectsData = [
         {
             id: 1,
-            title: 'Projet 1',
-            description: 'Description du projet 1.',
-            image: 'image_projet_1.jpg',
+            title: 'PAGE D\'ACCUEIL D\'UNE AGENCE DE VOYAGE',
+            description: 'Implémenter une interface responsive avec HTML et CSS; \nVersionner le projet avec Git et Github; \nIntégrer du contenu conformément à une maquette avec HTML et CSS;\nInstaller un environnement de développement front-end.',
+            image: ImageBooki,
+            imageUrl: BookiURL,
+            link: 'https://laura-frances.github.io/Projet2/',
         },
         {
             id: 2,
-            title: 'Projet 2',
-            description: 'Description du projet 2.',
-            image: 'image_projet_2.jpg',
+            title: 'PORTFOLIO D\'UNE ARCHITECTE D\'INTERIEUR',
+            description: 'Manipuler les éléments du DOM avec JavaScript; \nRécupérer les données utilisateurs dans le JavaScript via des formulaires; \nGérer les événements utilisateurs avec JavaScript',
+            image: SophieBluel,
+            imageUrl: SophieURL,
+            link: 'https://github.com/Laura-Frances/Projet3.git',
         },
         {
             id: 3,
-            title: 'Projet 3',
-            description: 'Description du projet 3.',
-            image: 'image_projet_3.jpg',
+            title: 'APPLICATION WEB DE LOCATION IMMOBILIERE',
+            description: 'Développer une interface web avec Sass; \nMettre en œuvre des animations CSS; \nInitialiser une application avec Create React App; \n Configurer la navigation entre les pages de l\'application avec React Router; \nDévelopper des éléments d\'un site web grâce à des composants React.',
+            image: Kasa,
+            imageUrl: KasaURL,
+            link: 'https://github.com/Laura-Frances/Projet6.git',
         },
     ];
 
@@ -38,41 +51,31 @@ const Projects = () => {
         setModalOpen(false);
     };
 
-
     return (
         <Element name="Projets">
             <section className="section-projects-page">
                 <div className="projects-block">
-                    <div className="titles-projects">
-                        <h2 className='projets-title'>MES PROJETS</h2>
-                    </div>
+                    <h2 className='projets-title'>MES PROJETS</h2>
+                    {/* Ajouter une image cliquable avec un lien */}
+
                     <div className="project-cards">
+
                         {projectsData.map((project) => (
-                            <div className="project-card" key={project.id}>
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
-                                <button onClick={() => openModal(project)}>Voir détails</button>
+                            <div className="card card-hover card-vibrate">
+                                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        className="card-banner" src={project.imageUrl} /></a>
+                                <h3 className="card-title">{project.title}</h3>
+                                <button className="card-button" onClick={() => openModal(project)}>Voir détails</button>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+
             {/* Fenêtre modale */}
             {modalOpen && (
-                <div className="modal">
-                    <div className="modal-content">
-                        <span className="close-button" onClick={closeModal}>
-                            &times;
-                        </span>
-                        {selectedProject && (
-                            <>
-                                <h2>{selectedProject.title}</h2>
-                                <p>{selectedProject.description}</p>
-                                <img src={selectedProject.image} alt={selectedProject.title} />
-                            </>
-                        )}
-                    </div>
-                </div>
+                <Modale selectedProject={selectedProject} closeModal={closeModal} />
             )}
         </Element>
     );

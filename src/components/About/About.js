@@ -8,7 +8,8 @@ import Scrollspy from 'react-scrollspy';
 
 const About = () => {
     const [isAboutVisible, setIsAboutVisible] = useState(false);
-    const text = `Id etiam illud putabat comparandis aliquando adhiberemus aliquando aliquando possemus diligendo in ne in amicitiis quam inimicitiarum valet praecipiendum ne tollendam possemus Scipio potius illud potius in inciperemus Quin eum praeceptum odisse minus illud in possemus id inimicitiarum valet fuit cogitandum ne quam est ut quam inciperemus amare cogitandum amicitiis.`;
+    const text = `Mon parcours légèrement atypique a débuté dans le domaine du tourisme, mais ma soif d'apprendre et mon désir de relever de nouveaux défis m'ont conduite à entreprendre une reconversion enthousiaste dans le développement web.
+    Je me suis rapidement immergée dans la création de sites web, en me concentrant principalement sur l'aspect front-end. J'ai découvert une manière passionnante d'allier ma créativité à mes compétences techniques, en veillant à ce que chaque site web que je crée est à la fois esthétiquement agréable et fonctionnel.`;
 
     useEffect(() => {
         const handleScroll = () => {

@@ -30,14 +30,14 @@ const Home = () => {
                         <Typewriter onInit={(typewriter) => {
                             typewriter
                                 .typeString("Web Developer")
-                                .pauseFor(1200)
+                                .pauseFor(1500)
                                 .deleteChars(13)
                                 .typeString("<span class='developer-text'>Front-End Developer</span><span class='orange-letter'>.</span>")
-                                .pauseFor(2200)
+                                .pauseFor(5500)
                                 .deleteChars(20)
-                                .pauseFor(1200)
+                                .pauseFor(12000)
                                 .typeString("Web Developer")
-                                .pauseFor(1500)
+                                .pauseFor(5500)
                                 .deleteChars(13)
                                 .pauseFor(1200)
                                 .typeString("<span class='developer-text'>Front-End Developer</span><span class='orange-letter'>.</span>")

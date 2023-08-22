@@ -13,7 +13,7 @@
     height: 650px;
     position: relative;
     align-items: center;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 20px;
     margin-top: 150px;
@@ -26,7 +26,7 @@
     text-align: center;
     font-size: 80px;
     color: #fff;
-    opacity: 0.08;
+    opacity: 0.15;
     margin: 0;
 }
 .skills-title::after {

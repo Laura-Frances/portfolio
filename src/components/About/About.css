@@ -11,7 +11,7 @@
     width: 70%;
     height: 600px;
     position: relative;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 20px;
     margin-top: 150px;
@@ -27,7 +27,7 @@
 .about-me {
     font-size: 80px;
     color: #fff;
-    opacity: 0.08;
+    opacity: 0.15;
     margin: 0;
     z-index: 2;
 }
@@ -57,10 +57,11 @@
     position: absolute;
     right: 0;
     color: #fff;
-    padding: 20px;
-    font-size: 25px;
-    margin-top: 50px;
-    max-width: 50%;
+    padding: 50px;
+    text-align: justify;
+    font-size: 22px;
+    margin: 25px 25px 0px 0px;
+    width: 50%;
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 3s ease-in-out;
@@ -70,9 +71,8 @@
 }
 
 .picture-about img {
-    max-width: 330px;
-    margin-left: 200px;
-    margin-top: 40px;
+    width: 330px;
+    margin: 40px 0px 0px 200px;
 }
 
 .download-button {
@@ -83,7 +83,7 @@
 }
 
 .download-button a {
-    color: white;
+    color: #fff;
     border: 2px solid #ff4d5a;
     padding: 10px 20px;
     text-decoration: none;
