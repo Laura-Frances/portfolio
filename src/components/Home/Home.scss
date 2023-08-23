@@ -41,29 +41,17 @@
     margin-top: 25px;
 }
 
-.underline.show {
-    width: 95%;
-    animation: slideInLine 5s forwards;
-    margin-top: 25px;
-}
-
-@keyframes slideInLine {
-    from {
-        transform: translateX(-30%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
 .photo-container {
-    width: 470px;
-    height: 470px;
+    max-width: 470px;
+    max-height: 470px;
     margin-right: 300px;
     animation: float 4s infinite;
     clip-path: ellipse(50% 50% at 50% 50%);
+}
 
+.photo-container {
+    width:auto;
+    height: auto;
 }
 
 @keyframes float {
