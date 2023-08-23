@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Skills/Skills.css';
+import '../Skills/Skills.scss';
 import { Element } from 'react-scroll';
 import HTML from '../Skills/logo-html5.png';
 import JS from '../Skills/logo-js.png';

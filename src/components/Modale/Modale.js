@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Modale/Modale.css';
+import '../Modale/Modale.scss';
 
 function Modal({ selectedProject, closeModal }) {
 

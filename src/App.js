@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Welcome from './components/Welcome/Welcome';
 import Banner from './components/Banner/Banner';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -11,6 +12,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
       <div className="App">
+        <Welcome />
         <Banner />
         <Home />
         <About />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import '../Banner/Banner.css';
+import '../Banner/Banner.scss';
 
 const Banner = () => {
   const [currentSection, setCurrentSection] = useState('');
@@ -31,6 +31,7 @@ const Banner = () => {
   return (
     <div className="banner-container">
       <nav className="navigation">
+        
         <ul className="menu">
           <li>
             <Link

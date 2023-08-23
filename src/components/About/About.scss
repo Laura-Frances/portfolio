@@ -1,0 +1,197 @@
+$about-bg-color: #1a1a1a;
+$about-border-color: rgba(0, 0, 0, 0.2);
+$about-title-color: #fff;
+$about-text-color: #fff;
+$about-subtitle-color: #fff;
+$about-download-button-color: #fff;
+$about-download-button-hover-color: #FF6600;
+
+.section-about-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .about-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        background-color: $about-bg-color;
+        width: 70%;
+        position: relative;
+        border: 3px solid $about-border-color;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 150px 0px 80px 0px;
+
+        .titles {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+
+            .about-me {
+                font-size: 80px;
+                color: $about-title-color;
+                opacity: 0.15;
+                margin: 0;
+                z-index: 2;
+
+                &::after {
+                    content: "";
+                    width: 150px;
+                    height: 3px;
+                    background-color: $about-title-color;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .txt-title-about span {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $about-subtitle-color;
+                font-size: 30px;
+                font-weight: bolder;
+            }
+        }
+
+        .text-about_me {
+            right: 0;
+            color: $about-text-color;
+            padding: 50px;
+            text-align: justify;
+            font-size: 22px;
+            margin: 25px 25px 0px 0px;
+            min-width: 60%;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .text-about_me.visible {
+            opacity: 1;
+        }
+
+        .picture-about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            opacity: 0;
+            transition: opacity 2s ease;
+            animation: horizontal-shaking 4s ease infinite;
+        }
+
+        .picture-about img {
+            width: 300px;
+            max-width: 100%;
+        }
+
+        .picture-about.visible {
+            opacity: 1;
+        }
+
+        .download-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+
+            a {
+                color: $about-download-button-color;
+                border: 2px solid #ff4d5a;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+                text-align: center;
+
+                &:hover {
+                    background-color: $about-download-button-hover-color;
+                }
+            }
+        }
+    }
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(20px) }
+    50% { transform: translateX(-20px) }
+    75% { transform: translateX(20px) }
+    100% { transform: translateX(0) }
+   }
+
+@media (max-width: 1440px) {
+    .about-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .section-about-page .about-block .text-about_me {
+        position: inherit;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .about-block {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .section-about-page .about-block .text-about_me {
+        position: inherit;
+        text-align: center;
+        max-width: 100%;
+        padding: 0px;
+        margin: 20px 0px 10px 0px;
+        font-size: 15px;
+    }
+
+    .picture-about {
+        align-items: center;
+    }
+
+    .section-about-page .about-block .titles .about-me {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .about-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .text-about_me {
+        max-width: 100%;
+    }
+
+    .section-about-page .about-block .picture-about img {
+        max-width: 100%;
+
+    }
+
+    .titles {
+        font-size: 20px;
+    }
+
+}

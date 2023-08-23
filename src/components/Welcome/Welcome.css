@@ -1,0 +1,36 @@
+.welcome.fullscreen {
+  z-index: 3;
+  animation: slideHeight 3s ease-in-out;
+  height:100%;
+}
+
+.welcome {
+  height:0;
+  z-index: 1;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  position: inherit;
+  font-size: 30px;
+  color: #fff;
+}
+
+@keyframes slideHeight {
+  100% {
+    height: 100%;
+  }
+  100% {
+  height: 0%;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Projects/Projects.css';
+import '../Projects/Projects.scss';
 import { Element } from 'react-scroll';
 import Modale from '../Modale/Modale';
 import ImageBooki from '../Projects/Booki-img.png';
@@ -56,12 +56,10 @@ const Projects = () => {
             <section className="section-projects-page">
                 <div className="projects-block">
                     <h2 className='projets-title'>MES PROJETS</h2>
-                    {/* Ajouter une image cliquable avec un lien */}
 
                     <div className="project-cards">
-
                         {projectsData.map((project) => (
-                            <div className="card card-hover card-vibrate">
+                            <div className="card card-hover card-vibrate" >
                                 <a href={project.link} target="_blank" rel="noopener noreferrer">
                                     <img
                                         className="card-banner" src={project.imageUrl} /></a>

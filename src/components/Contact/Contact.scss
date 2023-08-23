@@ -36,7 +36,7 @@
 }
 .title::after {
     content: "";
-    width: 100px; 
+    width: 150px; 
     height: 3px; 
     background-color: #fff; 
     position: absolute;
@@ -96,7 +96,6 @@
 }
 
 #submit-form {
-    font-family: 'Consolas' !important;
     color: #fff;
     border: none;
     border-bottom: 5px solid #ff4d5a;
@@ -117,4 +116,33 @@
 
 #submit-form:hover {
     background-color: #ff4d5a;
+}
+
+@media (max-width: 750px) {
+  .contact-block {
+    width: 90%; // Réduisez la largeur du bloc de contact pour les écrans plus petits
+  }
+
+  .title {
+    font-size: 20px; // Ajustez la taille de la police du titre pour les écrans plus petits
+  }
+
+  .contact-form-name,
+  .contact-form-email,
+  .contact-form-message {
+    width: 90%; // Utilisez des largeurs de formulaire flexibles pour les écrans plus petits
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-form-name,
+  .contact-form-email,
+  .contact-form-message {
+    width: 100%; // Ajustez la largeur du formulaire pour les écrans très étroits
+  }
+
+  #submit-form {
+    font-size: 15px; // Ajustez la taille du bouton de soumission pour les écrans très étroits
+    margin: 20px 0px 15px 0px; // Ajustez la marge du bouton de soumission
+  }
 }

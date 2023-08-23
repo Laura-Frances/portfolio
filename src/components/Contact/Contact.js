@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Contact/Contact.css';
+import '../Contact/Contact.scss';
 import { Element } from 'react-scroll';
 import emailjs from 'emailjs-com';
 

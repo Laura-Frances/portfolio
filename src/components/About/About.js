@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './About.css';
+import './About.scss';
 import { Element } from 'react-scroll';
 import Profil from '../About/profil.png';
 import MonCV from '../About/CV_2023.pdf';
-import Scrollspy from 'react-scrollspy';
-
 
 const About = () => {
+    
     const [isAboutVisible, setIsAboutVisible] = useState(false);
     const text = `Mon parcours légèrement atypique a débuté dans le domaine du tourisme, mais ma soif d'apprendre et mon désir de relever de nouveaux défis m'ont conduite à entreprendre une reconversion enthousiaste dans le développement web.
     Je me suis rapidement immergée dans la création de sites web, en me concentrant principalement sur l'aspect front-end. J'ai découvert une manière passionnante d'allier ma créativité à mes compétences techniques, en veillant à ce que chaque site web que je crée est à la fois esthétiquement agréable et fonctionnel.`;
@@ -35,11 +34,12 @@ const About = () => {
                     <div className="titles">
                         <h2 className='about-me'>A PROPOS DE MOI</h2>
                     </div>
+                    <div className={`picture-about ${isAboutVisible ? "visible" : ""}`}>
+
+                        <img src={Profil} alt="Icone de profil" />
+                    </div>
                     <div className={`text-about_me ${isAboutVisible ? "visible" : ""}`}>
                         {text}
-                    </div>
-                    <div className='picture-about'>
-                        <img src={Profil} alt="Icone de profil" />
                     </div>
                     <div className="download-button">
                         <a href={MonCV} download="CV">Télécharger mon CV</a>
