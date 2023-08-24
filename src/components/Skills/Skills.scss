@@ -12,7 +12,7 @@
   align-items: center;
   z-index: 1;
   background-color: #1a1a1a;
-  min-width: 70%;
+  width: 70%;
   position: relative;
   align-items: center;
   border: 3px solid rgba(0, 0, 0, 0.2);
@@ -81,7 +81,6 @@
   }
 }
 
-
 .skill-item {
   position: relative;
   display: flex;
@@ -114,7 +113,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 750px), (max-width: 1240px) {
   .about-block {
     max-width: 100%;
     display: flex;
@@ -131,6 +130,7 @@
   .skills-block {
     max-width: 100%;
     flex-direction: column;
+    margin-top: 0px;
   }
 
   .skills-row-1,

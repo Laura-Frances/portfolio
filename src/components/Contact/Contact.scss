@@ -14,7 +14,7 @@
     border: 3px solid rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 20px;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 .contact-title {
@@ -119,19 +119,20 @@
     background-color: #ff4d5a;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 750px), (max-width: 1440px) {
   .contact-block {
-    width: 90%; // Réduisez la largeur du bloc de contact pour les écrans plus petits
+    width: 70%; 
+    margin-top: 100px;
   }
 
   .title {
-    font-size: 20px; // Ajustez la taille de la police du titre pour les écrans plus petits
+    font-size: 20px; 
   }
 
   .contact-form-name,
   .contact-form-email,
   .contact-form-message {
-    width: 90%; // Utilisez des largeurs de formulaire flexibles pour les écrans plus petits
+    width: 90%; 
   }
 }
 
@@ -139,11 +140,13 @@
   .contact-form-name,
   .contact-form-email,
   .contact-form-message {
-    width: 100%; // Ajustez la largeur du formulaire pour les écrans très étroits
+    width: 100%; 
   }
-
+  .contact-block {
+    margin-top: 100px;
+  }
   #submit-form {
-    font-size: 15px; // Ajustez la taille du bouton de soumission pour les écrans très étroits
-    margin: 20px 0px 15px 0px; // Ajustez la marge du bouton de soumission
+    font-size: 15px; 
+    margin: 20px 0px 15px 0px; 
   }
 }

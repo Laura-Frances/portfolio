@@ -10,7 +10,7 @@ function Welcome() {
    
     const fullscreenTimeout = setTimeout(() => {
       setShowFullscreen(false);
-    }, 3000);
+    }, 3200);
 
     return () => {
       clearTimeout(fullscreenTimeout);

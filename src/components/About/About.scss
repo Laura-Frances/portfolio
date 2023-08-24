@@ -1,8 +1,5 @@
 $about-bg-color: #1a1a1a;
 $about-border-color: rgba(0, 0, 0, 0.2);
-$about-title-color: #fff;
-$about-text-color: #fff;
-$about-subtitle-color: #fff;
 $about-download-button-color: #fff;
 $about-download-button-hover-color: #FF6600;
 
@@ -33,7 +30,6 @@ $about-download-button-hover-color: #FF6600;
 
             .about-me {
                 font-size: 80px;
-                color: $about-title-color;
                 opacity: 0.15;
                 margin: 10px;
                 z-index: 2;
@@ -42,7 +38,7 @@ $about-download-button-hover-color: #FF6600;
                     content: "";
                     width: 150px;
                     height: 3px;
-                    background-color: $about-title-color;
+
                     position: absolute;
                     bottom: 0;
                     left: 50%;
@@ -56,7 +52,6 @@ $about-download-button-hover-color: #FF6600;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                color: $about-subtitle-color;
                 font-size: 30px;
                 font-weight: bolder;
             }
@@ -64,9 +59,8 @@ $about-download-button-hover-color: #FF6600;
 
         .text-about_me {
             right: 0;
-            color: $about-text-color;
             padding: 50px;
-            width: 50%;
+            max-width: 50%;
             text-align: justify;
             font-size: 22px;
             margin: 25px 25px 0px 0px;
@@ -86,8 +80,8 @@ $about-download-button-hover-color: #FF6600;
             align-items: center;
             margin-top: 30px;
             opacity: 0;
-            transition: opacity 2s ease;
-            animation: horizontal-shaking 4s ease infinite;
+            transition: opacity 3s ease;
+            animation: horizontal-shaking 9s ease infinite;
         }
 
         .picture-about img {
@@ -123,14 +117,38 @@ $about-download-button-hover-color: #FF6600;
     }
 }
 @keyframes horizontal-shaking {
-    0% { transform: translateX(0) }
+    0% { transform: translateX(-20) }
     25% { transform: translateX(20px) }
     50% { transform: translateX(-20px) }
     75% { transform: translateX(20px) }
-    100% { transform: translateX(0) }
+    100% { transform: translateX(20) }
    }
 
+@media (max-width: 1440px) {
+    .about-block {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
 
+    .section-about-page .about-block .text-about_me {
+        position: inherit;
+        max-width: 100%;
+        padding: 0px;
+        margin: 20px 0px 10px 0px;
+        font-size: 15px;
+    }
+
+    .picture-about {
+        align-items: center;
+    }
+
+    .section-about-page .about-block .titles .about-me {
+        font-size: 20px;
+    }
+}
 @media (max-width: 750px) {
 
     .about-block {
@@ -143,8 +161,6 @@ $about-download-button-hover-color: #FF6600;
 
     .section-about-page .about-block .text-about_me {
         position: inherit;
-        text-align: center;
-        text-align: center;
         max-width: 100%;
         padding: 0px;
         margin: 20px 0px 10px 0px;

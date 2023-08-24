@@ -3,7 +3,7 @@ import '../Home/Home.scss';
 import Background from '../Particles/background';
 import { Element } from 'react-scroll';
 import Typewriter from "typewriter-effect";
-import Photo from '../Home/Bienvenue.jpg';
+import Photo from '../Home/Laura.jpg';
 
 const Home = () => {
 

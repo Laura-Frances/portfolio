@@ -11,9 +11,9 @@ import NODE from '../Skills/logo-node.png';
 import GIT from '../Skills/logo-git.png';
 
 const Skills = () => {
-    const [isAboutVisible, setIsAboutVisible] = useState(false);
+    const [isAboutVisible, setIsAboutVisible] = useState(false); // état sera utilisé pour déterminer si la section skills est visible à l'écran ou non
 
-    useEffect(() => {
+    useEffect(() => { // utilisé pour définir un gestionnaire d'événements de défilement
         const handleScroll = () => {
             const aboutSection = document.querySelector(".section-skills-page");
 

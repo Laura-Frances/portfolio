@@ -15,7 +15,7 @@ const Projects = () => {
         {
             id: 1,
             title: 'PAGE D\'ACCUEIL D\'UNE AGENCE DE VOYAGE',
-            description: 'Implémenter une interface responsive avec HTML et CSS; \nVersionner le projet avec Git et Github; \nIntégrer du contenu conformément à une maquette avec HTML et CSS;\nInstaller un environnement de développement front-end.',
+            description: 'Installer un environnement de développement front-end \n Intégrer du contenu conformément à une maquette avec HTML et CSS \nImplémenter une interface responsive avec les Media Queries \nVersionner le projet avec Git et Github',
             image: ImageBooki,
             imageUrl: BookiURL,
             link: 'https://laura-frances.github.io/Projet2/',
@@ -23,7 +23,7 @@ const Projects = () => {
         {
             id: 2,
             title: 'PORTFOLIO D\'UNE ARCHITECTE D\'INTERIEUR',
-            description: 'Manipuler les éléments du DOM avec JavaScript; \nRécupérer les données utilisateurs dans le JavaScript via des formulaires; \nGérer les événements utilisateurs avec JavaScript',
+            description: 'Manipuler les éléments du DOM avec JavaScript \nRécupérer les données utilisateurs dans le JavaScript via des formulaires \nGérer les événements utilisateurs avec JavaScript',
             image: SophieBluel,
             imageUrl: SophieURL,
             link: 'https://github.com/Laura-Frances/Projet3.git',
@@ -31,7 +31,7 @@ const Projects = () => {
         {
             id: 3,
             title: 'APPLICATION WEB DE LOCATION IMMOBILIERE',
-            description: 'Développer une interface web avec Sass; \nMettre en œuvre des animations CSS; \nInitialiser une application avec Create React App; \n Configurer la navigation entre les pages de l\'application avec React Router; \nDévelopper des éléments d\'un site web grâce à des composants React.',
+            description: 'Initialiser une application avec Create React App \n Configurer la navigation entre les pages de l\'application avec React Router \nDévelopper une interface web avec Sass \nMettre en œuvre des animations CSS \n Développer des éléments d\'un site web grâce à des composants React',
             image: Kasa,
             imageUrl: KasaURL,
             link: 'https://github.com/Laura-Frances/Projet6.git',
@@ -40,7 +40,8 @@ const Projects = () => {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
-
+    
+// gestion modal open/close
     const openModal = (project) => {
         setSelectedProject(project);
         setModalOpen(true);
@@ -59,7 +60,7 @@ const Projects = () => {
 
                     <div className="project-cards">
                         {projectsData.map((project) => (
-                            <div className="card card-hover card-vibrate" >
+                            <div className="card card-hover card-vibrate" key={project.id}>
                                 <a href={project.link} target="_blank" rel="noopener noreferrer">
                                     <img
                                         className="card-banner" src={project.imageUrl} /></a>

@@ -3,7 +3,7 @@ import '../Modale/Modale.scss';
 
 function Modal({ selectedProject, closeModal }) {
 
-    const handleBackgroundClick = (e) => {
+    const handleBackgroundClick = (e) => { // click du background
         if (e.target.classList.contains('background-overlay')) {
             closeModal();
         }
@@ -14,7 +14,7 @@ function Modal({ selectedProject, closeModal }) {
             {/* Arrière-plan flouté */}
             <div className="background-overlay" onClick={handleBackgroundClick}></div>
 
-            {/* Modal */}
+            {/* Modale */}
             <div className="modal">
                 <div className="modal-content">
                     {selectedProject && (
@@ -23,7 +23,7 @@ function Modal({ selectedProject, closeModal }) {
                             <div className="img-description-container">
                                 <img className='img-modale' src={selectedProject.image} alt={selectedProject.title} />
                                 <div className="description-block">
-                                    <h2 className='subtitle-modale'>Compétences acquises :</h2>
+                                    <h2 className='subtitle-modale'>Challenges et Compétences relevées:</h2>
                                     <ul className='description-modale'>
                                         {selectedProject.description.split('\n').map((item, index) => (
                                             <li key={index}>{item}</li>
