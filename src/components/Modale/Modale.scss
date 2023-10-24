@@ -31,6 +31,17 @@ $overlay-background-color: rgba(0, 0, 0, 0.7);
             margin-right: 30px;
         }
     }
+    .close-button {
+        position: absolute;
+        right: 5px; 
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff; 
+        z-index: 3;
+        padding: 10px; 
+    }
 }
 
 .background-overlay {
@@ -44,12 +55,14 @@ $overlay-background-color: rgba(0, 0, 0, 0.7);
 }
 
 .title-modale,
-.description-modale {
+.description-modale,
+.description-difficulties,
+.description-context {
     display: flex;
     flex-direction: column;
     position: relative;
     text-align: center;
-    color: #fff;
+    margin: 0px;
 }
 
 .img-description-container {
@@ -58,7 +71,9 @@ $overlay-background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
 }
 
-.description-block {
+.description-block,
+.context,
+.difficulties {
     background-color: #282828;
     display: flex;
     flex-direction: column;
@@ -69,21 +84,25 @@ $overlay-background-color: rgba(0, 0, 0, 0.7);
     max-height: 800px;
 }
 
-.subtitle-modale {
+.subtitle-modale,
+.description-context,
+.description-difficulties {
     text-align: center;
-    color: #fff;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
+    color: $modal-border-color;
 }
 
-.description-modale {
-    margin: 10px 0;
-    font-size: 20px;
+.description-modale,
+.context,
+.difficulties {
+    margin: 0px 0;
+    font-size: 15px;
     padding-left: 20px;
 }
 
 .description-modale>li {
     list-style-type: disc;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {

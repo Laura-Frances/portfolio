@@ -34,11 +34,11 @@ $about-download-button-hover-color: #FF6600;
                 margin: 10px;
                 z-index: 2;
 
-                &::after {
+                &.about-me::after {
                     content: "";
                     width: 150px;
                     height: 3px;
-
+                    background-color: #fff;
                     position: absolute;
                     bottom: 0;
                     left: 50%;
@@ -85,7 +85,7 @@ $about-download-button-hover-color: #FF6600;
         }
 
         .picture-about img {
-            width: 300px;
+            width: 200px;
             max-width: 100%;
         }
 
@@ -116,13 +116,28 @@ $about-download-button-hover-color: #FF6600;
         }
     }
 }
+
 @keyframes horizontal-shaking {
-    0% { transform: translateX(-20) }
-    25% { transform: translateX(20px) }
-    50% { transform: translateX(-20px) }
-    75% { transform: translateX(20px) }
-    100% { transform: translateX(20) }
-   }
+    0% {
+        transform: translateX(-20)
+    }
+
+    25% {
+        transform: translateX(20px)
+    }
+
+    50% {
+        transform: translateX(-20px)
+    }
+
+    75% {
+        transform: translateX(20px)
+    }
+
+    100% {
+        transform: translateX(20)
+    }
+}
 
 @media (max-width: 1440px) {
     .about-block {
@@ -149,6 +164,7 @@ $about-download-button-hover-color: #FF6600;
         font-size: 20px;
     }
 }
+
 @media (max-width: 750px) {
 
     .about-block {

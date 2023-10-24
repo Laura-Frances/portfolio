@@ -17,7 +17,7 @@ const Skills = () => {
         const handleScroll = () => {
             const aboutSection = document.querySelector(".section-skills-page");
 
-            if (aboutSection) {
+            if (aboutSection) { // condition gèrant la visibilité de la section pour appliquer l'animation ou pas
                 const rect = aboutSection.getBoundingClientRect();
                 const isVisible = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2; setIsAboutVisible(isVisible);
                 setIsAboutVisible(isVisible);
